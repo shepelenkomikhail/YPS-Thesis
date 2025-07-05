@@ -1,0 +1,1 @@
+export type NoteType = "orderedList" | "checklist" | "text";

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'react-grid-layout/css/styles.css';
+@import 'react-resizable/css/styles.css';
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-black: #010101;
+    --color-white: #ffffff;
+    --color-pearlbush: #e6ddd6;
+    --color-schooner: #918983;
+    --color-quincy: #5b3629;
+    --color-purpleheart: #682bd7;
+    --color-portage: #a37cf0;
+    --color-mediumredviolet: #bd2e95;
+    --color-ash: #c8bfb6;
+    --color-timberwolf: #d4cfc9;
+    --color-nomad: #b0a89f;
+    --color-sandybrown: #ebd9c1;
+    --color-terracotta: #e76f51;
+    --color-junglegreen: #36cdba;
+    --color-yelloworange: rgba(251,191,36,0.84);
+    --color-backgroundviolet: #676279;
+    --color-boxviolet: #2b2738;
+    --color-secondarydarktext: #B0B0B0;
+    --color-secondviolettext: #786a9c;
+    --color-buttondarkborder: #4e4a59;
+    --color-buttondarktext: #cbcacd;
+    --color-buttonviolet: #6e54b5;
+    --color-darkinput: #3b364c;
+    --color-darkplaceholder: #6d6b79;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    @apply text-4xl xl:text-5xl;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+button, input {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.darkBody {
+    color-scheme: dark;
+    color: rgba(255, 255, 255, 0.87);
+    /*background-color: rgb(36, 36, 36);*/
+    background-color: #2b2738;
+    background-image:
+            linear-gradient(to right, dimgray 1px, transparent 1px),
+            linear-gradient(to bottom, dimgray 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.lightBody {
+    color-scheme: light;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #f4f4f4;
+    background-image:
+            linear-gradient(to right, lightgray 1px, transparent 1px),
+            linear-gradient(to bottom, lightgray 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+.logsignButton{
+    @apply bg-green-50 border border-gray-700 font-semibold rounded-lg min-w-32 min-h-12 max-w-36 max-h-12
+    hover:scale-[1.01] hover:bg-amber-50 transition-colors duration-200 ease-in-out cursor-pointer
+    dark:text-[#cbcacd] dark:bg-[#6e54b5] dark:hover:bg-violet-800;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.relativeMes {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 0.3s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.3s ease-in;
+}
